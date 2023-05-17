@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    overflow: hidden;
+  }
+  
+  .night {
+    height: 80vh;
+    width: 70vw;
+    border: 1px solid black;
+    margin: 5rem auto;
+    background: url(./img/Img_1.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+  }
+  
+  .surface {
+    height: 140px;
+    width: 500%;
+    background: url(./img/Img_02.png);
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 6s linear infinite;
+  }
+  
+  .car {
+    position: absolute;
+    bottom: 8%;
+    left: 24%;
+    animation: suspension 0.5s infinite linear;
+  }
+  
+  .active {
+    position: absolute;
+    bottom: 8%;
+    left: 0%;
+  }
+  
+  
+  .music audio {
+    position: absolute;
+  }
+  /* ------------- Animation ---------------- */
+  @keyframes moveRight {
+    100% {
+      transform: translateX(-2500px);
+    }
+  }
+  
+  @keyframes suspension {
+    100% {
+      transform: translateY(-1px);
+    }
+  
+    50% {
+      transform: translateY(1px);
+    }
+}
+    @keyframes car1 {
+        50%{
+            transform: translateY(2px);
+            transition: .5s;
+        }
+        100%{
+            transform: translateY(2px);
+            transition: .5s;
+        }
+    }

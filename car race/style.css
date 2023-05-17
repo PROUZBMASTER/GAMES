@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+#road {
+    width: 300px;
+    height: 753px;
+    background-image: url('road.jpg');
+    animation: moveRoad 2s linear infinite;
+    background-repeat: repeat-y;
+    background-position: 0%;
+}
+
+@keyframes moveRoad {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: 500px
+    }
+}
+
+#hero {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 500px;
+    left: 100px;
+    background-image: url('hero.png');
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+#villian {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-image: url('villian.png');
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    animation: blockHero 0.7s linear infinite;
+}
+
+@keyframes blockHero {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 660px
+    }
+}
+
+#score {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    background: white;
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 12px;
+}
